@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-
+import peopleData from './data/data.json'
+import { useEffect, useState } from 'react';
+import Userdetail from "./data/components/UserDetail/Userdetail";
 function App() {
+
+const [peoples, setpeoples] = useState([])
+
+useEffect(() => {
+  setpeoples(peopleData)
+}, [])
+
+const handleclickmanage =(people) =>{
+    console.log('Added', people)
+}
+// console.log(peoples)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {peoples.map((people) => <Userdetail people = {people} handleclickmanage = {handleclickmanage}></Userdetail>)}
     </div>
   );
 }
