@@ -1,23 +1,34 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import peopleData from './data/data.json'
-import { useEffect, useState } from 'react';
-import Userdetail from "./data/components/UserDetail/Userdetail";
+import ShowAllUsers from "./Components/ShowAllUsers/ShowAllUsers";
+import CartInformation from "./Components/CartInformation/CartInformation";
+
 function App() {
+  const [data, setData] = useState([])
+  const [user, setUser] = useState([])
 
-const [peoples, setpeoples] = useState([])
+  useEffect(() => {
+      setData(peopleData)
+  },[])
 
-useEffect(() => {
-  setpeoples(peopleData)
-}, [])
+  const handleClick = (newuser) =>{
+    console.log('This Is added', newuser)
+    const totalAdded = [...user, newuser]
+    setUser(totalAdded)
+  }
 
-const handleclickmanage =(people) =>{
-    console.log('Added', people)
-}
-// console.log(peoples)
+  console.log(user)
 
   return (
     <div className="App">
-      {peoples.map((people) => <Userdetail people = {people} handleclickmanage = {handleclickmanage}></Userdetail>)}
+      <div className = "showUser">
+        <ShowAllUsers users = {data} handleClick = {handleClick}></ShowAllUsers>
+      </div>
+
+      <div className = "userCart">
+        <CartInformation user = {user}></CartInformation>
+      </div>
     </div>
   );
 }
