@@ -8,6 +8,22 @@
 }
 
 .userCart{
-    margin-left: 60px;
+    width: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.test{
+    padding: 0px;
+    margin: 0px;
+    height: 400px;
+    width: 400px;
+    margin-right: 55px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 20px;
 }

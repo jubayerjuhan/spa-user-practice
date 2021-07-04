@@ -1,7 +1,16 @@
-h3, p{
+h2, p{
     margin: 0px;
 }
 
 p{
     line-height: 1.5;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+h2{
+    margin-bottom: 20px;
 }

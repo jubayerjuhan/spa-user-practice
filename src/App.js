@@ -27,7 +27,9 @@ function App() {
       </div>
 
       <div className = "userCart">
-        <CartInformation user = {user}></CartInformation>
+        <div className="test"> 
+          <CartInformation user = {user}></CartInformation>
+        </div>
       </div>
     </div>
   );

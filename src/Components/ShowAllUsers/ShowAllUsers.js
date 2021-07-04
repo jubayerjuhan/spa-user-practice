@@ -14,7 +14,7 @@ const ShowAllUsers = (props) => {
                         <p>Email: {user.email}</p>
                         <p>Phone No: {user.phoneNo}</p>
                         <p>Income: ${user.income}</p>
-                        <button class="glow-on-hover" type="button" onClick = {()=> props.handleClick(user)}>Add Me</button>
+                        <button className="glow-on-hover" type="button" onClick = {()=> props.handleClick(user)}>Add Me</button>
                     </div>
                 </div>
             

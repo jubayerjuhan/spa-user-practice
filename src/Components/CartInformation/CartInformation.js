@@ -12,10 +12,12 @@ const CartInformation = (props) => {
         
     }
     return (
-        <div>
-            <h3>This Is Information</h3>
-            <p>Total Added: {user.length}</p>
-            <p>{user.length} Peoples Total Yearly Income {totalIncome}</p>
+        <div className="information">
+            <div>
+                <h2>This Is Information</h2>
+                <p>Total Added: {user.length}</p>
+                <p>{user.length} Peoples Total Yearly Income {totalIncome}</p>
+            </div>
         </div>
     );
 };
